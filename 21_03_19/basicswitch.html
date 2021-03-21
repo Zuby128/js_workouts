@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Switch Statement</title>
+</head>
+<body>
+    <script>
+        const schedule = prompt("Please select a day: \n- Monday\n- Tuesday\n- Wednesday \n- Thursday\n- Friday\n- Saturday\n- Sunday")
+        switch(schedule){
+            case "monday":
+            case "wednesday":
+            case "thursday":
+                console.info("single session")
+                break;
+            case "tuesday":
+            case "sunday":
+                console.log("there is no live session")
+                break;
+            case "saturday":
+                console.warn("double session")
+                break;
+            default:
+                console.error("not valid enter, please enter a day")
+        }
+    </script>
+</body>
+</html>
