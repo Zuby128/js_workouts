@@ -14,16 +14,21 @@
 
 # reversed()
 
-def reversed():
-    reversed = ""
-    user_input = input("Type a word: ")
-    left_index = 0
-    right_index = len(user_input) - 1
+# def reversed():
+#     reversed = ""
+#     user_input = input("Type a word: ")
+#     left_index = 0
+#     right_index = len(user_input) - 1
 
-    while right_index >= left_index:
-        reversed += user_input[right_index]
-        right_index -= 1
-    print(reversed)
+#     while right_index >= left_index:
+#         reversed += user_input[right_index]
+#         right_index -= 1
+#     print(reversed)
 
-
-reversed()
+# reversed()
+zero = int(False)
+one = int(True)
+hundred = f"{one}{zero}{zero}"
+print(hundred)
+print(int(True)) 
+print(int(False))
