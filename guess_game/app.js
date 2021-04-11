@@ -2,24 +2,34 @@
 const checkNum = document.getElementById('checkNum');
 const guessBtn = document.getElementById('guessBtn');
 
-const guessNum = Math.floor((Math.random() * 100) + 1);
+let guessNum = Math.floor((Math.random() * 100) + 1);
 
 guessBtn.addEventListener('click', guessControl)
 
 let message = document.getElementById('message')
 let counter = document.getElementById('counter')
 
+let resetBtn = document.getElementById('resetBtn')
+resetBtn.disabled = true;
+resetBtn.addEventListener('click', resetGame = () => {
+    location.reload()
+})
+
 let count = 1
-function guessControl() {
-    const newNum = Number(checkNum.value)
-    if(newNum === guessNum) {    
+function guessControl(event) {
+    event.preventDefault()
+    if(Number(checkNum.value) === guessNum) {    
         message.innerHTML = 'CONGRATS, YOU GOT IT!!!'
         counter.innerHTML = `guess number: ${count++}`
-    } else if(newNum > guessNum) {    
+        guessBtn.disabled = true;
+        resetBtn.disabled = false;
+    } else if(Number(checkNum.value) > guessNum) {    
         message.innerHTML = 'please down' 
-        counter.innerHTML = `guess number: ${count++}`   
+        counter.innerHTML = `guess number: ${count++}`
     } else {    
         message.innerHTML = 'please up' 
         counter.innerHTML = `guess number: ${count++}`
-    }            
+    }     
 }
+
+

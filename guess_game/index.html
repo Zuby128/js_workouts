@@ -58,6 +58,12 @@
         h3{
             margin-top: 2em;
         }
+        #checkNum{
+            width: 10rem;
+        }
+        .resetBtn{
+            margin: 3rem auto;
+        }
     </style>
 </head>
 <body>
@@ -68,19 +74,27 @@
                     <h1>Guess The Number (1 - 100)</h1>
                 </div>
                 <div class="guess-number">
-                    <input type="text" class="check-part" id="checkNum" placeholder="≧◠‿◠≦✌">
-                    <button id="guessBtn" class="btn btn-primary">GUESS</button>
+                    <form>
+                        <input type="number" id="checkNum" min="1" max="100" 
+                        placeholder="≧◠‿◠≦✌">
+                        <button id="guessBtn" class="btn btn-primary">GUESS</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="row" id="second">
             <div class="messages col-sm-12">
-                    <h3 id="message"></h3>
+                <h3 id="message"></h3>
             </div>
         </div>
         <div class="row">
             <div class="messages col-sm-12">
-                    <p id="counter"></p>
+                <p id="counter"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="resetBtn">
+                <button class="btn btn-danger" id="resetBtn">reload game</button>
             </div>
         </div>
     </div>

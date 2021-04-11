@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Project</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .container{
+            margin: 10% auto;
+            border:1px solid black;
+            border-radius: 1em;
+            max-width: 70%;
+            padding-bottom: 10em;
+            padding-left: 3em;
+            padding-right: 3em;
+            background-color: #f4c983;
+        }
+        body{
+            background: linear-gradient(rgb(238, 45, 45), rgb(231, 231, 104), white) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        h1{
+            margin: 3rem auto;
+            text-align: center;
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+            margin: 2em auto;
+        }
+        input{
+            width: 60%;
+            height: 2.7rem;
+            border: none;
+            border-radius: 3rem;
+        }
+        button{
+            background-color: green;
+            color: white;
+            font-weight: bolder;
+            font-size: 1rem;
+            padding: 0.9rem 1.2rem;
+            border: none;
+            border-radius: 100%;
+        }
+        .buttonDel{
+            background-color: red;
+            color: white;
+            font-weight: bolder;
+            font-size: 1rem;
+            padding: 0.9rem 1.2rem;
+            border: none;
+            border-radius: 100%;
+        }
+        .buttonDel:hover{
+            background-color: rgb(240, 78, 78);
+            color: black;
+            font-weight: bolder;
+            font-size: 1rem;
+            padding: 0.9rem 1.2rem;
+            border: none;
+            border-radius: 100%;
+        }
+        button:hover{
+            background-color: greenyellow;
+            color: black;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        button:active{
+            border: none;
+        }
+        button:after{
+            border: none;
+        }
+        #todoList{
+            
+        }
+        p{
+            list-style: none;
+            margin: 0.3rem auto;
+            background-color: white;
+            font-weight: bold;
+            width: 60%;
+            height: 1.8rem;
+            border-radius: 3rem;
+            padding-left: 1.4rem;
+            padding-top: 0.9rem;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+        label > p {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header">
+                    <h1>My ToDo List</h1>
+                </div>
+                <div class="form">
+                    <form>
+                        <input type="text" placeholder=" add something...">
+                        <button id="addBtn">+</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="todoList" class="listPart col-sm-12">
+                <label>
+                    <p class="todoContent"></p>
+                    <button class="buttonDel"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

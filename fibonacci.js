@@ -23,6 +23,13 @@
 // }
 // console.log(reverseText);
 
-const x = 6 % 2;
-const y = x ? 'one' : 'two';
-console.log(y);
+// const x = 6 % 2;
+// const y = x ? 'one' : 'two';
+// console.log(y);
+
+let a = 'This Is My Solution';
+let c = ''
+for(let i of a.split('')){
+    i === i.toUpperCase() ? c += i.toLowerCase() : c += i.toUpperCase() 
+}
+console.log(c)

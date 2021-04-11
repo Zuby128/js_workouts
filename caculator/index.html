@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <script src="app.js" defer></script>
+    <style>
+        body{
+            background: linear-gradient(rgb(238, 45, 45), rgb(231, 231, 104), white) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            vertical-align: middle;
+        }
+        .main{
+            border: 0.6em solid black;
+            background-color: black;
+            border-radius: 0.5em;
+            margin-top: 2rem;
+        }
+        table{
+            text-align: center;
+        }
+        input{
+            width: 13rem;
+            height: 3.6rem;
+            font-size: 2em;
+            border: none;
+            border-radius: 0.3em;
+            background-color: black;
+            color: white;
+            text-align: right;
+        }
+        button{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            border: none;
+            background-color: rgb(88, 87, 87);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: rgb(170, 167, 167);
+            color: black;
+            font-weight: bold;
+        }
+        .top{
+            background-color: rgb(170, 167, 167);
+            color: black;
+            font-weight: bold;
+        }
+        .top:hover{
+            background-color: rgb(88, 87, 87);
+            color: white;
+            font-weight: bold;
+        }
+        .right{
+            background-color: rgb(241, 161, 57);
+            font-weight: bold;
+        }
+        .right:hover{
+            background-color: rgb(252, 103, 4);
+            font-weight: bold;
+        }
+        #zero{
+            width: 6.3em;
+            border-radius: 5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <table>
+                <thead>
+                    <tr>
+                    <th colspan="4">
+                        <form>
+                            <input type="text">
+                        </form>
+                    </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button id="clear" class="top">AC</button></td>
+                        <td><button id="negative" class="top"><sup>+</sup>/-</button></td>
+                        <td><button id="percent" class="top">%</button></td>
+                        <td><button id="divide" class="right">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="seven" class="num">7</button></td>
+                        <td><button id="eight" class="num">8</button></td>
+                        <td><button id="nine" class="num">9</button></td>
+                        <td><button id="multiply" class="right">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="four" class="num">4</button></td>
+                        <td><button id="five" class="num">5</button></td>
+                        <td><button id="six" class="num">6</button></td>
+                        <td><button id="minus" class="right">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="one" class="num">1</button></td>
+                        <td><button id="two" class="num">2</button></td>
+                        <td><button id="three" class="num">3</button></td>
+                        <td><button id="plus" class="right">+</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="zero" class="num">0</button></td>
+                        <td><button id="dot" class="num">.</button></td>
+                        <td><button id="equals" class="right">=</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>
