@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            height: 100px;
+            width: 100px;
+            font-size: 41px;
+        }
+        button{
+            height: 70px;
+            width: 70px;
+            font-size: 40px;
+        }
+        #up{
+            border: 2px solid rgb(1, 51, 1);
+            background-color: green;
+        }
+        #down{
+            border: 2px solid blue;
+            background-color: rgb(35, 35, 235);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="btnput">
+                <button id="up">+</button>
+                <input type="number">
+                <button id="down">-</button>    
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const body = document.querySelector('body')
+        const btnUp = document.getElementById('up')
+        const btnDown = document.getElementById('down')
+        const input = document.querySelector('input')
+
+        btnUp.addEventListener('click', (e)=>{
+            e.preventDefault()
+            input.value = Number(input.value) + 1
+            if(Number(input.value)<0){
+                body.style.backgroundColor = 'pink'
+            } else if (Number(input.value)==0) {
+                body.style.backgroundColor = 'cyan'
+            } else {
+                body.style.backgroundColor = 'yellow'
+            }
+        })
+        btnDown.addEventListener('click', (e)=>{
+            e.preventDefault()
+            input.value = Number(input.value) - 1
+            if(Number(input.value)<0){
+                body.style.backgroundColor = 'pink'
+            } else if (Number(input.value)==0) {
+                body.style.backgroundColor = 'cyan'
+            } else {
+                body.style.backgroundColor = 'yellow'
+            }
+        })
+        
+    </script>
+</body>
+</html>
